@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcola quanto sei stupida</title>
+    <style>
+        body {
+            background-color: #ffccff;
+            color: #330066;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff0066;
+            font-size: 3em;
+        }
+
+        #result {
+            margin-top: 50px;
+            padding: 30px;
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #ff6600;
+            border-radius: 10px;
+            display: inline-block;
+            visibility: hidden;
+            width: 60%;
+            text-align: center;
+        }
+
+        button {
+            background-color: #33cc33;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #28a745;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCOLO STUPIDITÀ DI GRETA <3</h1>
+    <button onclick="calcolaStupidita()">CALCOLA QUANTO SEI STUPIDA!!</button>
+    <div id="result">0%</div>
+
+    <script>
+        function calcolaStupidita() {
+            const percentuale = Math.floor(Math.random() * 101); // Genera un numero casuale da 0 a 100
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = percentuale + '%';
+            resultDiv.style.visibility = 'visible';
+        }
+    </script>
+</body>
+</html>
